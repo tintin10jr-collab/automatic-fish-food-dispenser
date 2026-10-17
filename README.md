@@ -40,6 +40,10 @@ See the video in the [`videos`](videos/) folder.
 2. It checks whether a scheduled feeding time has arrived.
 3. The servo moves the dispensing mechanism.
 4. The mechanism returns to its resting position according to the programmed sequence.
+## My Other Projects
+
+- [Autonomous Voice-Controlled Line-Following Robot](https://github.com/tintin10jr-collab/autonomous-voice-controlled-line-following-robot)
+- [Automatic Fish Food Dispenser](https://github.com/tintin10jr-collab/automatic-fish-food-dispenser-Copy)
 
 ## Future Improvements
 
