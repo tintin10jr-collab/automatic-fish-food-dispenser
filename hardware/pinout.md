@@ -1,21 +1,28 @@
 
-# Hardware Connections
+# Hardware Pin Diagram
 
-## Components
-- ESP32 development board
-- Servo motor
-- Fish food container and dispensing mechanism
+## ESP32 to Servo Motor
 
-## Pin Connections
-
-| Servo Wire | ESP32 Connection |
+| Servo Wire | ESP32 / Power Connection |
 |---|---|
-| Signal (orange/yellow) | GPIO18, if used in the current code |
-| VCC (red) | Appropriate rated power supply |
-| GND (brown/black) | Ground |
+| Orange / Yellow (Signal) | GPIO18 |
+| Red (VCC) | Servo power supply positive |
+| Brown / Black (GND) | Common GND |
 
-## Power and Safety
-- Check the servo's voltage and current requirements.
-- Do not power a high-current servo directly from an ESP32 GPIO pin.
-- If using a separate servo supply, connect its ground to ESP32 ground.
-- Confirm the wiring against the actual hardware before powering on.
+## Wiring Diagram
+
+```text
+ESP32                  Servo
+-----                  -----
+GPIO18 --------------> Signal
+
+External supply (+) -> VCC
+External supply (-) --+-> GND
+ESP32 GND ------------+
+```
+
+## Important Notes
+- GPIO18 controls the servo; it does not power it.
+- Use a supply rated for the servo.
+- Connect ESP32 GND and servo supply GND together.
+- Verify the wiring before applying power.
